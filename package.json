@@ -4,7 +4,17 @@
   "description": "A starter configuration for your test project with nightwatch.js",
   "main": "nightwatch.conf.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "node nightwatch.conf.js",
+    "test": "./node_modules/.bin/nightwatch --reporter ./html-reporter.js"
+  },
+  "dependencies": {    
+  },
+  "devDependencies": {    
+    "env2": "^2.1.1",    
+    "nightwatch": "^0.9.16",
+    "nightwatch-html-reporter": "^2.0.2",
+    "nightwatch-video-recorder": "^1.1.0",
+    "selenium-download": "^2.0.10"
   },
   "repository": {
     "type": "git",
@@ -14,7 +24,8 @@
     "testing",
     "nightwatch",
     "UAT",
-    "end to end test"
+    "User Acceptance Testing",
+    "End to End Testing"
   ],
   "author": "Alessandro La Bella",
   "license": "MIT",
